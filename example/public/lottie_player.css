@@ -1216,7 +1216,7 @@ svg {
     display: none
 }
 
-@media (min-width:576px) {
+@media (min-width: 576px) {
     .sm\:mb-0 {
         margin-bottom: 0
     }
