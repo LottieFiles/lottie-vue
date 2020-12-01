@@ -44,8 +44,6 @@
     import "@dotlottie/player-component";
     import Controls from "./Controls.vue";
 
-    import './app.demo.css';
-
     export default {
         components: {
             'controls': Controls
