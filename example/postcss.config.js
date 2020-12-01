@@ -8,6 +8,7 @@ module.exports = {
             content: [
                 `./public/**/*.html`,
                 `./src/**/*.vue`,
+                `../src/*.vue`,
             ],
 
             defaultExtractor(content) {

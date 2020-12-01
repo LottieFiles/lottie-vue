@@ -99,6 +99,7 @@
                             <div v-for="(color, index) in colorPickerColors"
                                  @click="setBackgroundColor(color)"
                                  class="w-5 h-5 rounded-full cursor-pointer"
+                                 :key="index"
                                  :style="{backgroundColor: color.hex, margin: '0px 5px', border: 'solid 1px '+color.border}"></div>
                         </div>
                     </div>
