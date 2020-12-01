@@ -1,16 +1,15 @@
 <template>
     <!-- track-->
     <div v-if="options.animation" class="w-86 flex flex-col justify-center">
-        <input
-            type="range"
-            class="w-full mb-1"
-            id="lf-range"
-            step="0.5"
-            min="0"
-            :max="options.animation.totalFrames"
-            :value="getCurrentFrame"
-            v-on:input="seek"
-            :style="{
+        <input type="range"
+               class="w-full mb-1"
+               id="lf-range"
+               step="0.5"
+               min="0"
+               :max="options.animation.totalFrames"
+               :value="getCurrentFrame"
+               v-on:input="seek"
+               :style="{
                 backgroundImage: [
                     '-webkit-gradient(linear, left top, right top, color-stop('+playedPercent+', rgba(15, 204, 206, 1)), color-stop('+playedPercent+', #DAE1E7))',
                     '-moz-linear-gradient(left center, rgba(15, 204, 206, 1) 0%, rgba(15, 204, 206, 1) '+playedPercent+', #DAE1E7 '+playedPercent+', #DAE1E7 100%)'
@@ -42,8 +41,8 @@
             getCurrentFrame() {
                 return Math.round(this.options.animation.currentFrame);
             },
-            playedPercent(){
-                return Math.round(this.options.animation.currentFrame/this.options.animation.getDuration(true)*100)+'%';
+            playedPercent() {
+                return Math.round(this.options.animation.currentFrame / this.options.animation.getDuration(true) * 100) + '%';
             }
         },
         destroyed() {

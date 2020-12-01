@@ -5,38 +5,38 @@
             <div class="spinner"></div>
         </div>
         <lottie-player
-            v-if="is_dotlottie === false"
-            ref="player"
-            :autoplay="autoplay"
-            :src="src"
-            :loop="options.loop"
-            :speed="options.speed"
-            :style="{height: height, background: options.backgroundColor}"
-            @dblclick="toggleFullscreen"
+                v-if="is_dotlottie === false"
+                ref="player"
+                :autoplay="autoplay"
+                :src="src"
+                :loop="options.loop"
+                :speed="options.speed"
+                :style="{height: height, background: options.backgroundColor}"
+                @dblclick="toggleFullscreen"
         ></lottie-player>
         <dotlottie-player
-            v-if="is_dotlottie"
-            ref="player"
-            :autoplay="autoplay"
-            :loop="options.loop"
-            :src="src"
-            :style="{height: height, background: options.backgroundColor}"
-            :speed="options.speed"
-            @dblclick="toggleFullscreen"
+                v-if="is_dotlottie"
+                ref="player"
+                :autoplay="autoplay"
+                :loop="options.loop"
+                :src="src"
+                :style="{height: height, background: options.backgroundColor}"
+                :speed="options.speed"
+                @dblclick="toggleFullscreen"
         >
         </dotlottie-player>
         <controls
-            v-if="playerControls && options.animation"
-            @setBackgroundColor="setBackgroundColor"
-            @setPlayerSpeed="setPlayerSpeed"
-            @togglePlayPause="togglePlayPause"
-            @toggleLoop="toggleLoop"
-            @stop="stop"
-            :show-color-picker-tool="showColorPicker"
-            :player-size="playerSize"
-            :player-controls-position="playerControlPosition"
-            :theme="theme"
-            :options="options"></controls>
+                v-if="playerControls && options.animation"
+                @setBackgroundColor="setBackgroundColor"
+                @setPlayerSpeed="setPlayerSpeed"
+                @togglePlayPause="togglePlayPause"
+                @toggleLoop="toggleLoop"
+                @stop="stop"
+                :show-color-picker-tool="showColorPicker"
+                :player-size="playerSize"
+                :player-controls-position="playerControlPosition"
+                :theme="theme"
+                :options="options"></controls>
     </div>
 </template>
 <script>
