@@ -1,11 +1,9 @@
 <template>
     <div class="w-full relative">
-        <!-- lottie player / dot-lottie player -->
         <div v-if="loading" class="w-full h-full absolute flex justify-center items-center">
             <div class="spinner"></div>
         </div>
         <lottie-player
-                v-if="is_dotlottie === false"
                 ref="player"
                 :autoplay="autoplay"
                 :src="src"
@@ -14,17 +12,6 @@
                 :style="{height: height, background: options.backgroundColor}"
                 @dblclick="toggleFullscreen"
         ></lottie-player>
-        <dotlottie-player
-                v-if="is_dotlottie"
-                ref="player"
-                :autoplay="autoplay"
-                :loop="options.loop"
-                :src="src"
-                :style="{height: height, background: options.backgroundColor}"
-                :speed="options.speed"
-                @dblclick="toggleFullscreen"
-        >
-        </dotlottie-player>
         <controls
                 v-if="playerControls && options.animation"
                 @setBackgroundColor="setBackgroundColor"
@@ -41,7 +28,6 @@
 </template>
 <script>
     import "@lottiefiles/lottie-player";
-    import "@dotlottie/player-component";
     import Controls from "./Controls.vue";
 
     export default {
@@ -49,10 +35,6 @@
             'controls': Controls
         },
         props: {
-            is_dotlottie: {
-                type: Boolean,
-                default: false
-            },
             autoplay: {
                 type: Boolean,
                 default: true

@@ -26,7 +26,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@dotlottie/player-component": "^1.0.4",
     "@lottiefiles/lottie-player": "^1.0.4",
     "vue": "^2.6.12",
     "vue-clickaway": "^2.2.2"

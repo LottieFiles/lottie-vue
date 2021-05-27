@@ -95,7 +95,6 @@ Add the element `lottie-vue-player` and set the `src` prop to a URL pointing to 
 | `speed`              | Animation speed.                                                       | `number`           | `1`         |
 | `style`              | The style for the container.                                           | `object`           | `undefined` |
 | `src` _(required)_   | Bodymovin JSON data or URL to JSON.                                    | `object` | `string`| `undefined` |
-| `is_dotlottie`       | Swap out normal player for dotlottie player                            | `boolean`          | `false`     |
 ## Events
 
 The following events are exposed and can be listened to via `addEventListener` calls.
