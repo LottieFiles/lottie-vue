@@ -2,7 +2,7 @@
 
 This is a Vue component for the Lottie Web Player. This library is a vue wrapper around the LottieFiles Lottie Web Player
 
-![screencast](demo.gif)
+![screencast](https://github.com/LottieFiles/lottie-vue/blob/master/demo.gif)
 #### In Javascript or TypeScript:
 
 1. Install package using npm or yarn.
