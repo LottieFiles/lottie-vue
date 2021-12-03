@@ -3,6 +3,7 @@
 This is a Vue component for the Lottie Web Player. This library is a vue wrapper around the LottieFiles Lottie Web Player
 
 ![screencast](https://github.com/LottieFiles/lottie-vue/blob/master/demo.gif)
+
 #### In Javascript or TypeScript:
 
 1. Install package using npm or yarn.
@@ -21,6 +22,42 @@ import LottieVuePlayer from "@lottiefiles/vue-lottie-player";
 ``` javascript
 Vue.use(LottieVuePlayer);
 ```
+
+#### With Nuxt:
+
+1. Install package using npm or yarn.
+
+```shell
+npm install --save @lottiefiles/vue-lottie-player
+```
+
+2. Create a folder called 'plugins' at the root of your project
+
+3. Create a file named 'lottie-vue-player.client.js' inside the 'plugins' directory
+
+4. Inside this file put :
+
+```javascript
+
+import Vue from 'vue';
+
+import LottieVuePlayer from "@lottiefiles/vue-lottie-player";
+
+Vue.use(LottieVuePlayer);
+
+```
+
+5. Add to nuxt.config.js:
+
+```javascript
+
+ plugins: [
+    "~/plugins/lottie-vue-player.client.js"
+  ]
+
+```
+
+---
 
 ## Example/Development
 
