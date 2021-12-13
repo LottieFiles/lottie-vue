@@ -1,11 +1,8 @@
-import Vue from "vue";
+import Vue, { createApp } from "vue";
 import App from "./App.vue";
-import LottieVuePlayer from "@lottiefiles/vue-lottie-player";
+import LottieVuePlayer from "../../dist/@lottiefiles/vue-lottie-player.umd";
 
-Vue.use(LottieVuePlayer);
+const app = createApp(App);
 
-Vue.config.productionTip = false;
-
-new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+app.use(LottieVuePlayer);
+app.mount("#app");

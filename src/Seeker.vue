@@ -37,12 +37,12 @@
                 seekerRangeFillTimer: null,
             }
         },
-        computed: {
+      computed: {
             getCurrentFrame() {
-                return Math.round(this.options.animation.currentFrame);
+                return Math.round(this.options.currentFrame);
             },
             playedPercent() {
-                return Math.round(this.options.animation.currentFrame / this.options.animation.getDuration(true) * 100) + '%';
+                return Math.round(this.options.currentFrame / this.options.animation.getDuration(true) * 100) + '%';
             }
         },
         destroyed() {

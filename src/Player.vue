@@ -27,6 +27,7 @@
     </div>
 </template>
 <script>
+    import { ref } from 'vue'
     import "@lottiefiles/lottie-player";
     import Controls from "./Controls.vue";
 
@@ -34,6 +35,34 @@
         components: {
             'controls': Controls
         },
+      setup () {
+        const player = ref(null);
+
+        return { player }
+      },
+      mounted() {
+        // this.player = this.$refs.player;
+
+        this.player.addEventListener('ready', function() {
+          console.log("Animation is ready!");
+          this.options.animation = this.player.getLottie();
+          this.options.currentFrame = this.options.animation.currentFrame;
+          this.loading = false;
+
+          // Otherwise the current frame doesn't get detected and computed methods
+          // don't fire
+          this.options.animation.addEventListener('enterFrame', function() {
+            this.options.currentFrame = this.options.animation.currentFrame;
+          }.bind(this));
+
+        }.bind(this));
+        this.player.addEventListener('complete', function() {
+          this.stop();
+        }.bind(this));
+
+        this.options.backgroundColor = this.backgroundColor;
+        this.options.speed = this.speed;
+      },
         props: {
             autoplay: {
                 type: Boolean,
@@ -101,23 +130,12 @@
                     playing: true,
                     speed: 1,
                     animation: null,
+                    currentFrame: null,
                     backgroundColor: 'transparent',
                 },
-                player: null,
+                // player: null,
                 loading: true
             }
-        },
-        mounted() {
-            this.player = this.$refs.player;
-            this.player.addEventListener('ready', function () {
-                this.options.animation = this.player.getLottie();
-                this.loading = false;
-            }.bind(this));
-            this.player.addEventListener('complete', function () {
-                this.stop();
-            }.bind(this));
-            this.options.backgroundColor = this.backgroundColor;
-            this.options.speed = this.speed;
         },
         methods: {
             togglePlayPause() {

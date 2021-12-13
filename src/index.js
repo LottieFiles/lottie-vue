@@ -1,8 +1,8 @@
 import Player from "./Player.vue";
 
 const LottieVuePlayer = {
-  install(Vue, options = {}) {
-    Vue.component("lottie-vue-player", Player);
+  install: (app, options = {}) => {
+    app.component("lottie-vue-player", Player);
   },
 };
 

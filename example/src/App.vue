@@ -7,11 +7,18 @@
             <h1>Welcome to LottieVue example</h1>
         </div>
         <br>
-        <lottie-vue-player :src="`https://assets10.lottiefiles.com/packages/lf20_tzjfwgud.json`"
-                           :theme="options.theme"
-                           :player-size="options.playerSize"
-                           :player-controls="true"
-                           style="width: 100%; height:400px"></lottie-vue-player>
+      <lottie-vue-player :src="`https://assets10.lottiefiles.com/packages/lf20_tzjfwgud.json`"
+                         :theme="options.theme"
+                         :player-size="options.playerSize"
+                         :player-controls="true"
+                         :show-color-picker="true"
+                         style="width: 100%; height:400px"></lottie-vue-player>
+      <lottie-vue-player :src="`./frosted-glass.json`"
+                         :theme="options.theme"
+                         :player-size="options.playerSize"
+                         :player-controls="true"
+                         :show-color-picker="true"
+                         style="width: 100%; height:400px"></lottie-vue-player>
     </div>
 </template>
 

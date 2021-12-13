@@ -55,7 +55,7 @@
                             stroke-width="0.262318"/>
                     <path
                             d="M15.3 4.06877L15.2999 4.06874L12.503 1.24981L12.503 1.2498C12.1948 0.939196 11.6935 0.93729 11.3831 1.24535C11.0727 1.55335 11.0706 2.0546 11.3786 2.36505C11.3786 2.36506 11.3786 2.36506 11.3786 2.36507L13.62 4.62417L11.3808 6.86334C11.0714 7.17246 11.0714 7.67403 11.3808 7.98315C11.5354 8.13773 11.7381 8.21512 11.9406 8.21512C12.1431 8.21512 12.346 8.13776 12.5006 7.98343L12.5007 7.98335L15.2976 5.18642C15.6062 4.87801 15.6069 4.37835 15.3 4.06877Z"
-                            :fill="theme[theme.active].color" :stoke="theme[theme.active].color"
+                            :fill="theme[theme.active].color" :stroke="theme[theme.active].color"
                             stroke-width="0.262318"/>
                     <mask id="path-3-outside-1" maskUnits="userSpaceOnUse" x="1.57104" y="8.24951" width="14"
                           height="11" fill="black">
@@ -74,7 +74,7 @@
 
             <!-- background-color-->
             <div class="tools relative"
-                 v-on-clickaway="hideColorPicker"
+                 v-click-away="hideColorPicker"
                  v-if="showColorPickerTool"
                  @click="showColorPicker">
                 <svg :class="theme.active === 'dark' ? 'opacity-70' : ''" width="16" height="18" viewBox="0 0 16 18"
@@ -113,11 +113,11 @@
 </template>
 <script>
     import Seeker from "./Seeker.vue";
-    import {directive as onClickaway} from 'vue-clickaway';
+    import { directive } from 'vue3-click-away';
 
     export default {
         directives: {
-            onClickaway: onClickaway,
+            ClickAway: directive,
         },
         components: {
             'seeker': Seeker
@@ -156,7 +156,7 @@
                 ]
             }
         },
-        created() {
+      created() {
             window.addEventListener('keydown', function (e) {
                 this.handleKeyboardShortcuts(e);
             }.bind(this));
