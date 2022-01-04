@@ -216,14 +216,14 @@
   resolved "https://registry.yarnpkg.com/@isaacs/string-locale-compare/-/string-locale-compare-1.1.0.tgz#291c227e93fd407a96ecd59879a35809120e432b"
   integrity sha512-SQ7Kzhh9+D+ZW9MA0zkYv3VXhIDNx+LzM6EJ+/65I3QY+enU6Itte7E5XX7EWrqLW2FN4n06GWzBnPoC3th2aQ==
 
-"@lottiefiles/lottie-player@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@lottiefiles/lottie-player/-/lottie-player-1.0.4.tgz#57fbd475501e0e81e121f440db530ff34541b054"
-  integrity sha512-hLPs3jqTSXhGPrfcwWtRs9ZvmLA2XK0mr9873JwTwKl9MDXTtcGXY28QWrG5ro18hH5WqNSBfKERb8opnnBcrQ==
+"@lottiefiles/lottie-player@^1.5.3":
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/@lottiefiles/lottie-player/-/lottie-player-1.5.4.tgz#fa86f306b2449ca9f0a3febd8f88942700063314"
+  integrity sha512-jrwDDkOotgAQkiwmjTT5iLB2yWPmb49gtsnWebfAax6FIpUz0z0krm7ThoMhs7ipZuqic0xuScfMwUopWCr8bA==
   dependencies:
     "@types/pako" "^1.0.1"
     lit-element "^2.3.1"
-    lottie-web "^5.7.8"
+    lottie-web "^5.8.1"
     pako "^1.0.11"
     resize-observer-polyfill "^1.5.1"
     shx "^0.3.3"
@@ -5661,10 +5661,10 @@ loglevel@^1.6.8:
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.7.1.tgz#005fde2f5e6e47068f935ff28573e125ef72f197"
   integrity sha512-Hesni4s5UkWkwCGJMQGAh71PaLUmKFM60dHvq0zi/vDhhrzuk+4GgNbTXJ12YYQJn6ZKBDNIjYcuQGKudvqrIw==
 
-lottie-web@^5.7.8:
-  version "5.7.8"
-  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.7.8.tgz#c7a2e42983bcb42093590a03ccdde8741d3f960e"
-  integrity sha512-VxKCZk33GwZac6mVHvT3grUFR/zrMsW85M7vxQPrgpJOP2IhcnjMbuD0h7muBkXgw84K9KmGulmcyzvhpzSMAg==
+lottie-web@^5.8.1:
+  version "5.8.1"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.8.1.tgz#807e0af0ad22b59bf867d964eb684cb3368da0ef"
+  integrity sha512-9gIizWADlaHC2GCt+D+yNpk5l2clZQFqnVWWIVdY0LnxC/uLa39dYltAe3fcmC/hrZ2IUQ8dLlY0O934Npjs7Q==
 
 lower-case@^1.1.1:
   version "1.1.4"

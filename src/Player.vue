@@ -23,11 +23,13 @@
                 :player-size="playerSize"
                 :player-controls-position="playerControlPosition"
                 :theme="theme"
-                :options="options"></controls>
+                :options="options">
+        </controls>
     </div>
 </template>
+
 <script>
-    import { ref } from 'vue'
+    import { ref, onMounted } from 'vue'
     import "@lottiefiles/lottie-player";
     import Controls from "./Controls.vue";
 
@@ -35,13 +37,9 @@
         components: {
             'controls': Controls
         },
-      setup () {
-        const player = ref(null);
-
-        return { player }
-      },
       mounted() {
-        // this.player = this.$refs.player;
+        this.player = this.$refs.player;
+        console.log(this.player.value);
 
         this.player.addEventListener('ready', function() {
           console.log("Animation is ready!");

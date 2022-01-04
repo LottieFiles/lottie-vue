@@ -12,13 +12,8 @@
                          :player-size="options.playerSize"
                          :player-controls="true"
                          :show-color-picker="true"
-                         style="width: 100%; height:400px"></lottie-vue-player>
-      <lottie-vue-player :src="`./frosted-glass.json`"
-                         :theme="options.theme"
-                         :player-size="options.playerSize"
-                         :player-controls="true"
-                         :show-color-picker="true"
-                         style="width: 100%; height:400px"></lottie-vue-player>
+                         style="width: 100%; height:400px">
+      </lottie-vue-player>
     </div>
 </template>
 
