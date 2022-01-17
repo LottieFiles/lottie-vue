@@ -29,7 +29,6 @@
 </template>
 
 <script>
-    import { ref, onMounted } from 'vue'
     import "@lottiefiles/lottie-player";
     import Controls from "./Controls.vue";
 
@@ -39,7 +38,6 @@
         },
       mounted() {
         this.player = this.$refs.player;
-        console.log(this.player.value);
 
         this.player.addEventListener('ready', function() {
           console.log("Animation is ready!");
