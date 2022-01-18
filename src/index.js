@@ -1,4 +1,5 @@
 import Player from "./Player.vue";
+import "./lottie_player.min.css";
 
 const LottieVuePlayer = {
   install(Vue, options = {}) {

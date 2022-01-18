@@ -3,27 +3,30 @@
         <div v-if="loading" class="w-full h-full absolute flex justify-center items-center">
             <div class="spinner"></div>
         </div>
-        <lottie-player
-                ref="player"
-                :autoplay="autoplay"
-                :src="src"
-                :loop="options.loop"
-                :speed="options.speed"
-                :style="{height: height, background: options.backgroundColor}"
-                @dblclick="toggleFullscreen"
-        ></lottie-player>
-        <controls
-                v-if="playerControls && options.animation"
-                @setBackgroundColor="setBackgroundColor"
-                @setPlayerSpeed="setPlayerSpeed"
-                @togglePlayPause="togglePlayPause"
-                @toggleLoop="toggleLoop"
-                @stop="stop"
-                :show-color-picker-tool="showColorPicker"
-                :player-size="playerSize"
-                :player-controls-position="playerControlPosition"
-                :theme="theme"
-                :options="options"></controls>
+        <div style="all: inherit">
+            <lottie-player
+                    ref="player"
+                    :autoplay="autoplay"
+                    :src="src"
+                    :loop="options.loop"
+                    :speed="options.speed"
+                    :style="{height: height, background: options.backgroundColor}"
+                    @dblclick="toggleFullscreen"
+            ></lottie-player>
+            <controls
+                    v-if="playerControls && options.animation"
+                    @setBackgroundColor="setBackgroundColor"
+                    @setPlayerSpeed="setPlayerSpeed"
+                    @togglePlayPause="togglePlayPause"
+                    @toggleLoop="toggleLoop"
+                    @stop="stop"
+                    :show-color-picker-tool="showColorPicker"
+                    :player-size="playerSize"
+                    :player-controls-position="playerControlPosition"
+                    :theme="theme"
+                    :options="options">
+            </controls>
+        </div>
     </div>
 </template>
 <script>
