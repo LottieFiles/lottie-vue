@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full relative">
+    <div class="w-full relative lottie-player">
         <div v-if="loading" class="w-full h-full absolute flex justify-center items-center">
             <div class="spinner"></div>
         </div>

@@ -2,7 +2,7 @@
 
     <div v-if="playerSize !== 'hide'" :class="playerControlsPosition === 'fixed' ? 'fixed mb-18 sm:mb-0' : ''"
          class="w-full pin-b pin-l px-3 py-6">
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center text-center">
             <!-- stop-->
             <div v-if="playerSize === 'minimal'" @click="stop"
                  :class="(options.playing === true ? 'opacity-50' : '')+' '+(theme.active === 'dark' && options.playing === false ? 'opacity-70' : '')"
@@ -88,13 +88,14 @@
                         class="absolute pin-b pin-r bg-grey-lightest border border-grey-light rounded-md p-3"
                         style="margin-right: -9px; margin-bottom: 50px;">
                     <div>
-                        <div class="w-4 h-4 absolute bg-grey-lightest border-r border-t border-grey-light"
-                             style="transform: rotate(135deg); border-radius: 0px 3px 0px 0px; bottom: -8px; right: 20px;"></div>
+                        <div class="w-4 h-4 absolute bg-grey-lightest border-r border-t border-grey-light triangle-border">
+                        </div>
                         <div class="p-2">
                             <p class="font-lf-bold text-grey-darkest mb-4">Background Color</p>
                             <p class="font-lf text-grey-darkest text-sm mb-3">Enter Hex or select.</p>
                             <input @keyup="updateBackgroundColor" v-model="backgroundColor"
                                    class="w-full text-grey-dark border border-grey-light bg-white px-3 py-2 rounded-md outline-none"
+                                   style="font-size: 100%; box-sizing: border-box"
                                    type="text">
                         </div>
                         <div class="flex p-2" style="margin: 0px -5px">
