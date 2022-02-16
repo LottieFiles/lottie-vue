@@ -5,7 +5,7 @@
   "description": "Lottie player wrapper for Vue.js by LottieFiles",
   "scripts": {
     "release": "semantic-release",
-    "build": "vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js"
+    "build": "vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html"
   },
   "main": "dist/@lottiefiles/vue-lottie-player.common.js",
   "files": [
