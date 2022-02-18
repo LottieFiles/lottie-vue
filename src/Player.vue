@@ -121,6 +121,7 @@
             }.bind(this));
             this.options.backgroundColor = this.backgroundColor;
             this.options.speed = this.speed;
+            this.options.loop = this.loop;
         },
         methods: {
             togglePlayPause() {
