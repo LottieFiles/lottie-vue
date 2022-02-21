@@ -40,11 +40,11 @@
         props: {
             autoplay: {
                 type: Boolean,
-                default: true
+                default: false
             },
             loop: {
                 type: Boolean,
-                default: true
+                default: false
             },
             showColorPicker: {
                 type: Boolean,
@@ -121,6 +121,7 @@
             }.bind(this));
             this.options.backgroundColor = this.backgroundColor;
             this.options.speed = this.speed;
+            this.options.loop = this.loop;
         },
         methods: {
             togglePlayPause() {
