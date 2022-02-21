@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@lottiefiles/vue-lottie-player",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Lottie player wrapper for Vue.js by LottieFiles",
   "scripts": {
     "release": "semantic-release",
