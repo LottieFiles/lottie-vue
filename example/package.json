@@ -7,7 +7,6 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "@lottiefiles/vue-lottie-player": "../",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },

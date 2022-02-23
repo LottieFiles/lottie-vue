@@ -1,6 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
-import LottieVuePlayer from "@lottiefiles/vue-lottie-player";
+import LottieVuePlayer from "../../dist/@lottiefiles/vue-lottie-player.common";
 
 Vue.use(LottieVuePlayer);
 
