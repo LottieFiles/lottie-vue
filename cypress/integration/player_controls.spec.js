@@ -7,7 +7,7 @@ context("Player controls", () => {
     cy.visit("http://localhost:8080/controls");
   });
 
-  it("clicks on play button and verifies animation is playing", function (done) {
+  it.skip("clicks on play button and verifies animation is playing", function (done) {
     cy.get("#player-one").find("#lottie-play-button").click();
 
     cy.get("#player-one").find('lottie-player').then(($el) => {
