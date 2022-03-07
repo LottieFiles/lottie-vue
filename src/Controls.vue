@@ -1,5 +1,6 @@
 <template>
   <div
+    id="lottie-controls"
     v-if="playerSize !== 'hide'"
     :class="
       playerControlsPosition === 'lf-fixed'
@@ -11,6 +12,7 @@
     <div class="lf-flex lf-justify-center lf-items-center lf-text-center">
       <!-- stop-->
       <div
+        id="lottie-stop-button"
         v-if="playerSize === 'minimal'"
         @click="stop"
         :class="
@@ -38,6 +40,7 @@
 
       <!-- play-->
       <div
+        id="lottie-play-button"
         v-if="!options.playing"
         @click="togglePlayPause"
         :class="
@@ -62,6 +65,7 @@
 
       <!-- pause-->
       <div
+        id="lottie-pause-button"
         v-if="options.playing"
         @click="togglePlayPause"
         :class="
@@ -97,6 +101,7 @@
 
       <!--  speed-->
       <div
+        id="lottie-speed-button"
         v-if="playerSize === 'standard'"
         @click="setPlayerSpeed"
         class="lf-mx-2 lf-flex lf-items-center cursor-pointer"
@@ -108,6 +113,7 @@
       </div>
 
       <seeker
+        id="lottie-seeker-input"
         class="lf-mx-2"
         v-if="playerSize === 'standard'"
         :theme="theme"
@@ -116,6 +122,7 @@
 
       <!-- loop-->
       <div
+        id="lottie-toogle-loop-button"
         @click="toggleLoop"
         :class="
           (options.loop === false ? 'lf-opacity-50' : '') +
@@ -178,6 +185,7 @@
 
       <!-- background-color-->
       <div
+        id="lottie-bg-picker-button"
         class="tools lf-relative"
         v-on-clickaway="hideColorPicker"
         v-if="showColorPickerTool"
@@ -223,6 +231,7 @@
             <div class="lf-flex lf-p-2" style="margin: 0px -5px">
               <div
                 v-for="(color, index) in colorPickerColors"
+                :id="'lottie-color-choice-' + index"
                 @click="setBackgroundColor(color)"
                 class="lf-w-5 lf-h-5 lf-rounded-full cursor-pointer"
                 :key="index"

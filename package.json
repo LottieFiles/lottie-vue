@@ -5,7 +5,12 @@
   "description": "Lottie player wrapper for Vue.js by LottieFiles",
   "scripts": {
     "release": "semantic-release",
-    "build": "vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html"
+    "build": "vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
+    "start-cypress": "yarn run cypress run",
+    "serve-app": "cd example && yarn run serve &",
+    "run-tests": "yarn run build && yarn run serve-app && BACK_PID=$! && wait $BACK_PID && yarn run start-cypress",
+    "postrun-tests": "kill $(lsof -t -i:8080)"
+
   },
   "main": "dist/@lottiefiles/vue-lottie-player.common.js",
   "files": [
@@ -43,6 +48,7 @@
     "@semantic-release/release-notes-generator": "^9.0.2",
     "@vue/cli-service": "^4.5.13",
     "@vue/compiler-sfc": "^3.0.11",
+    "cypress": "^9.5.1",
     "husky": ">=4",
     "lint-staged": ">=10",
     "rollup": "^2.50.1",
