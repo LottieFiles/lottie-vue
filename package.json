@@ -8,7 +8,7 @@
     "release": "semantic-release",
     "run-tests": "yarn run build-with-coverage && yarn run start-cypress",
     "postrun-tests": "kill $(lsof -t -i:8080)",
-    "start-and-run-tests": "yarn run build-with-coverage && yarn run serve-app && yarn run start-cypress",
+    "start-and-run-tests": "yarn run build-with-coverage && yarn run serve-app && BACK_PID=$! && wait $BACK_PID && yarn run start-cypress;",
     "poststart-and-run-tests": "kill $(lsof -t -i:8080)",
     "serve-app": "cd example && yarn && yarn run serve &",
     "start-cypress": "yarn run cypress run"
