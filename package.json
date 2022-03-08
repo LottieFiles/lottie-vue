@@ -6,8 +6,11 @@
     "build": "vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
     "build-with-coverage": "CODE_COVERAGE=true vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
     "release": "semantic-release",
-    "run-tests": "yarn run build-with-coverage && yarn run serve-app && BACK_PID=$! && wait $BACK_PID && yarn run start-cypress; kill $(lsof -t -i:8080)",
-    "serve-app": "cd example && yarn run serve &",
+    "run-tests": "yarn run build-with-coverage && yarn run start-cypress",
+    "postrun-tests": "kill $(lsof -t -i:8080)",
+    "start-and-run-tests": "yarn run build-with-coverage && yarn run serve-app && yarn run start-cypress",
+    "poststart-and-run-tests": "kill $(lsof -t -i:8080)",
+    "serve-app": "cd example && yarn && yarn run serve &",
     "start-cypress": "yarn run cypress run"
   },
   "main": "dist/@lottiefiles/vue-lottie-player.common.js",

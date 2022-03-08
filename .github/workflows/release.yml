@@ -36,12 +36,22 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
 
       - name: Install dependencies
-        run: yarn install
+        run:
+            yarn |
+            cd example && yarn
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Serve example app
+        continue-on-error: false
+        run: yarn run serve-app
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Build project and run tests
+        continue-on-error: false
         run: yarn run run-tests
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Build project
         run: yarn build
