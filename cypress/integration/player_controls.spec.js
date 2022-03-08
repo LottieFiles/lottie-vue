@@ -7,16 +7,17 @@ context("Player controls", () => {
     cy.visit("http://localhost:8080/controls");
   });
 
-  it.skip("clicks on play button and verifies animation is playing", function (done) {
-    cy.get("#player-one").find("#lottie-play-button").click();
-
-    cy.get("#player-one").find('lottie-player').then(($el) => {
+  it("clicks on play button and verifies animation is playing", function (done) {
+    cy.get("#player-one lottie-player").then(($el) => {
       const playerOne = $el.get(0);
 
-      console.log(playerOne);
-      expect(playerOne.currentState).to.eq("playing");
-      done();
+      playerOne.addEventListener("play", () => {
+        expect(playerOne.currentState).to.eq("playing");
+        done();
+      }, { once: true });
     });
+
+    cy.get("#player-one").find("#lottie-play-button").click();
   });
 
   it("clicks on pause button and verifies animation is paused", function (done) {
@@ -50,7 +51,6 @@ context("Player controls", () => {
     cy.get("#player-four lottie-player").then(($el) => {
       const playerFour = $el.get(0);
 
-      console.log(playerFour);
       expect(playerFour.loop).to.eq(true);
       done();
     });

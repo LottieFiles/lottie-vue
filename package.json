@@ -1,36 +1,19 @@
 {
-  "private": false,
   "name": "@lottiefiles/vue-lottie-player",
   "version": "1.0.5",
   "description": "Lottie player wrapper for Vue.js by LottieFiles",
   "scripts": {
-    "release": "semantic-release",
     "build": "vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
     "build-with-coverage": "CODE_COVERAGE=true vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
-    "start-cypress": "yarn run cypress run && npx nyc report --reporter=text-summary",
+    "release": "semantic-release",
+    "run-tests": "yarn run build-with-coverage && yarn run serve-app && BACK_PID=$! && wait $BACK_PID && yarn run start-cypress; kill $(lsof -t -i:8080)",
     "serve-app": "cd example && yarn run serve &",
-    "run-tests": "yarn run build-with-coverage && yarn run serve-app && BACK_PID=$! && wait $BACK_PID && yarn run start-cypress",
-    "postrun-tests": "kill $(lsof -t -i:8080)"
+    "start-cypress": "yarn run cypress run"
   },
   "main": "dist/@lottiefiles/vue-lottie-player.common.js",
   "files": [
     "dist"
   ],
-  "contributors": [
-    {
-      "name": "Mazin",
-      "email": "mazin@lottiefiles.com"
-    },
-    {
-      "name": "Hunain",
-      "email": "hunain@lottiefiles.com"
-    },
-    {
-      "name": "Karam",
-      "email": "karam@lottiefiles.com"
-    }
-  ],
-  "license": "MIT",
   "dependencies": {
     "@lottiefiles/lottie-player": "^1.0.4",
     "vue": "^2.6.12"
@@ -47,9 +30,11 @@
     "@semantic-release/github": "^7.2.1",
     "@semantic-release/npm": "^7.1.1",
     "@semantic-release/release-notes-generator": "^9.0.2",
+    "@vue/babel-preset-app": "^5.0.1",
     "@vue/cli-service": "^4.5.13",
     "@vue/compiler-sfc": "^3.0.11",
     "babel-plugin-istanbul": "^6.1.1",
+    "cypress": "9.5.1",
     "husky": ">=4",
     "lint-staged": ">=10",
     "rollup": "^2.50.1",
@@ -58,6 +43,20 @@
     "vue-clickaway": "^2.2.2",
     "vue-template-compiler": "^2.6.12"
   },
+  "contributors": [
+    {
+      "name": "Mazin",
+      "email": "mazin@lottiefiles.com"
+    },
+    {
+      "name": "Hunain",
+      "email": "hunain@lottiefiles.com"
+    },
+    {
+      "name": "Karam",
+      "email": "karam@lottiefiles.com"
+    }
+  ],
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
@@ -68,5 +67,6 @@
     "vue",
     "lottie",
     "lottiefiles"
-  ]
+  ],
+  "license": "MIT"
 }
