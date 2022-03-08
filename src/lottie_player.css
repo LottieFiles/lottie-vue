@@ -129,6 +129,10 @@
   margin-bottom: 4.5rem;
 }
 
+.lf-w-full {
+  width: 100%;
+}
+
 .lf-min-w-6 {
   min-width: 1.5rem;
 }
@@ -254,10 +258,28 @@
   border-right-color: transparent;
   border-radius: 50%;
   margin: 0 auto;
-  -webkit-animation: rotate 0.8s linear infinite;
-  animation: rotate 0.8s linear infinite;
+  -webkit-animation: rotate .8s linear infinite;
+  animation: rotate .8s linear infinite;
   z-index: 1;
-  position: absolute;
+  position: absolute
+}
+
+@-webkit-keyframes rotate {
+  to {
+      -webkit-transform: rotate(1turn);
+      transform: rotate(1turn)
+  }
+}
+
+@keyframes rotate {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg)
+  }
+  to {
+      -webkit-transform: rotate(1turn);
+      transform: rotate(1turn)
+  }
 }
 
 #lf-range {

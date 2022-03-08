@@ -13,7 +13,6 @@
       :showColorPicker="true"
       :loop="true"
       :autoplay="true"
-      style="width: 100%"
     ></lottie-vue-player>
 
     <lottie-vue-player
@@ -23,7 +22,6 @@
       :showColorPicker="true"
       :loop="true"
       :autoplay="true"
-      style="width: 100%; height: 400px"
     ></lottie-vue-player>
 
     <lottie-vue-player
@@ -33,7 +31,6 @@
       :showColorPicker="true"
       :loop="true"
       :autoplay="true"
-      style="width: 100%; height: 400px"
     ></lottie-vue-player>
 
     <lottie-vue-player
@@ -42,7 +39,6 @@
       :player-controls="true"
       :loop="false"
       :autoplay="false"
-      style="width: 100%; height: 400px"
     ></lottie-vue-player>
   </div>
 </template>

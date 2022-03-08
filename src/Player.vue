@@ -1,8 +1,8 @@
 <template>
-    <div class="w-full lf-relative vue-lottie-player">
+    <div class="lf-w-full lf-relative vue-lottie-player">
         <div
             v-if="loading"
-            class="w-full lf-h-full lf-absolute lf-flex lf-justify-center lf-items-center"
+            class="lf-w-full lf-h-full lf-absolute lf-flex lf-justify-center lf-items-center"
         >
             <div class="lf-spinner"></div>
         </div>
@@ -129,8 +129,6 @@ export default {
     },
     methods: {
         togglePlayPause() {
-            console.log("called toggle play pause");
-            console.log(this.options.playing);
             if (this.options.playing) {
                 this.player.pause();
                 this.options.playing = false;
@@ -139,62 +137,15 @@ export default {
                 this.options.playing = true;
             }
         },
-        mounted() {
-            this.player = this.$refs.player;
-            this.player.addEventListener('ready', function () {
-                this.options.animation = this.player.getLottie();
-                this.loading = false;
-            }.bind(this));
-            this.player.addEventListener('complete', function () {
-                this.stop();
-            }.bind(this));
-            this.options.backgroundColor = this.backgroundColor;
-            this.options.speed = this.speed;
-            this.options.loop = this.loop;
-            this.options.playing = this.autoplay;
-        },
-        methods: {
-            togglePlayPause() {
-                if (this.options.playing) {
-                    this.player.pause();
-                    this.options.playing = false;
-                } else {
-                    this.player.play();
-                    this.options.playing = true;
-                }
-            },
-            toggleLoop() {
-                if (this.options.loop) {
-                    this.player.setLooping(false);
-                    this.options.loop = false;
-                } else {
-                    this.player.setLooping(true);
-                    this.options.loop = true;
-                    this.options.playing = true;
-                    this.player.play();
-                }
-            },
-            setPlayerSpeed(speed) {
-                this.player.setSpeed(speed);
-                this.$emit('setPlayerSpeed', speed);
-            },
-            stop() {
-                this.player.seek(1);
-                this.player.stop();
-                this.options.playing = false;
-            },
-            setBackgroundColor(color) {
-                this.options.backgroundColor = color;
-                this.$emit('setBackgroundColor', color);
-            },
-            toggleFullscreen() {
-                this.$emit('toggleFullscreen');
-            },
-            getLottie() {
-                return (this.options.animation);
-            },
-            getPlayerState() {
-                return (this.player.currentState);
+        toggleLoop() {
+            if (this.options.loop) {
+                this.player.setLooping(false);
+                this.options.loop = false;
+            } else {
+                this.player.setLooping(true);
+                this.options.loop = true;
+                this.options.playing = true;
+                this.player.play();
             }
         },
         setPlayerSpeed(speed) {
@@ -219,6 +170,42 @@ export default {
         getPlayerState() {
             return (this.player.currentState);
         }
+    },
+    mounted() {
+        this.player = this.$refs.player;
+        this.player.addEventListener('ready', function () {
+            this.options.animation = this.player.getLottie();
+            this.loading = false;
+        }.bind(this));
+        this.player.addEventListener('complete', function () {
+            this.stop();
+        }.bind(this));
+        this.options.backgroundColor = this.backgroundColor;
+        this.options.speed = this.speed;
+        this.options.loop = this.loop;
+        this.options.playing = this.autoplay;
+    },
+    setPlayerSpeed(speed) {
+        this.player.setSpeed(speed);
+        this.$emit('setPlayerSpeed', speed);
+    },
+    stop() {
+        this.player.seek(1);
+        this.player.stop();
+        this.options.playing = false;
+    },
+    setBackgroundColor(color) {
+        this.options.backgroundColor = color;
+        this.$emit('setBackgroundColor', color);
+    },
+    toggleFullscreen() {
+        this.$emit('toggleFullscreen');
+    },
+    getLottie() {
+        return (this.options.animation);
+    },
+    getPlayerState() {
+        return (this.player.currentState);
     }
 }
 </script>

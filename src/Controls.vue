@@ -7,7 +7,7 @@
         ? 'lf-fixed lf-mb-18 lf-sm:mb-0'
         : ''
     "
-    class="w-full lf-pin-b lf-pin-l lf-px-3 lf-py-6"
+    class="lf-w-full lf-pin-b lf-pin-l lf-px-3 lf-py-6"
   >
     <div class="lf-flex lf-justify-center lf-items-center lf-text-center">
       <!-- stop-->
@@ -223,7 +223,7 @@
               <input
                 @keyup="updateBackgroundColor"
                 v-model="backgroundColor"
-                class="w-full text-grey-dark lf-border lf-border-grey-light bg-white lf-px-3 lf-py-2 lf-rounded-md outline-none"
+                class="lf-w-full text-grey-dark lf-border lf-border-grey-light bg-white lf-px-3 lf-py-2 lf-rounded-md outline-none"
                 style="font-size: 100%; box-sizing: border-box"
                 type="text"
               />

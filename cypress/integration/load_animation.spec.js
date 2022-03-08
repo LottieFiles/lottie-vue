@@ -12,8 +12,8 @@ context("Player component DOM check", () => {
   });
 
   it('Loads an animation with empty URL and spinner displays.', function () {
-    cy.get("#player-two .spinner")
-      .should("have.class", "spinner");
+    cy.get("#player-two .lf-spinner")
+      .should("have.class", "lf-spinner");
   });
 
   it('Loads an animation with invalid url.', function () {
