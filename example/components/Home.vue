@@ -1,20 +1,24 @@
 <template>
   <div>
-    <div style="display: flex; justify-content: center; align-content: center">
-    </div>
+    <div
+      style="display: flex; justify-content: center; align-content: center"
+    ></div>
     <div style="display: flex; justify-content: center; align-content: center">
       <h1>Welcome to LottieVue example</h1>
     </div>
     <br />
     <lottie-vue-player
       id="player-one"
-      :src="`https://assets10.lottiefiles.com/packages/lf20_tzjfwgud.json`"
+      :src="`https://assets9.lottiefiles.com/private_files/lf30_w3ku1h1i.json`"
       :theme="options.theme"
       :player-size="options.playerSize"
       :player-controls="true"
       :showColorPicker="true"
       :loop="true"
+      :speed="3"
       :autoplay="true"
+      mode="normal"
+      :background-color="options.backgroundColor"
       style="width: 100%; height: 400px"
     ></lottie-vue-player>
   </div>
@@ -28,7 +32,7 @@ export default {
       options: {
         minimizable: false,
         playerSize: "standard",
-        backgroundColor: "#fff",
+        backgroundColor: "#9dff97",
         backgroundStyle: "color",
         theme: {
           controlsView: "standard",
