@@ -1,6 +1,6 @@
 {
   "name": "@lottiefiles/vue-lottie-player",
-  "version": "1.0.6",
+  "version": "1.0.5",
   "description": "Lottie player wrapper for Vue.js by LottieFiles",
   "scripts": {
     "build": "vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
@@ -13,6 +13,10 @@
     "serve-app": "cd example && yarn && yarn run serve &",
     "start-cypress": "yarn run cypress run"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LottieFiles/lottie-vue.git"
+  },
   "main": "dist/@lottiefiles/vue-lottie-player.common.js",
   "files": [
     "dist"
@@ -22,6 +26,7 @@
     "vue": "^2.6.12"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.22.0",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@cypress/code-coverage": "^3.9.12",
