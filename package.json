@@ -4,6 +4,7 @@
   "description": "Lottie player wrapper for Vue.js by LottieFiles",
   "scripts": {
     "build": "vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
+    "build:dev": "vue-cli-service build --watch --inline-vue --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
     "build-with-coverage": "CODE_COVERAGE=true vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
     "release": "semantic-release",
     "run-tests": "yarn run build-with-coverage && yarn run start-cypress",
@@ -22,7 +23,7 @@
     "dist"
   ],
   "dependencies": {
-    "@lottiefiles/lottie-player": "^1.0.4",
+    "@lottiefiles/lottie-player": "^1.5.7",
     "vue": "^2.6.12"
   },
   "devDependencies": {
