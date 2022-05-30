@@ -37,21 +37,18 @@ jobs:
           cd example && yarn
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
+      - name: Build project
+        run: yarn build
       - name: Serve example app
         continue-on-error: false
         run: yarn run serve-app
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Build project and run tests
         continue-on-error: false
         run: yarn run run-tests
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Build project
-        run: yarn build
 
   release-npm:
     needs: build
@@ -64,6 +61,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
           registry-url: https://registry.npmjs.org/
       - run: yarn install --frozen-lockfile
+      - name: Build project
+        continue-on-error: false
+        run: yarn build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
@@ -87,6 +89,11 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: "@lottiefiles"
       - run: yarn install --frozen-lockfile
+      - name: Build project
+        continue-on-error: false
+        run: yarn build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run:
           echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >
           ~/.npmrc

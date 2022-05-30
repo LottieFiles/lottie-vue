@@ -6,7 +6,7 @@ import Properties from "../components/Properties.vue";
 import Methods from "../components/Methods.vue";
 import Controls from "../components/Controls.vue";
 import VueRouter from "vue-router";
-import LottieVuePlayer from "../../dist/@lottiefiles/vue-lottie-player.common";
+import LottieVuePlayer from "../../dist/vue-lottie-player.common";
 
 Vue.use(LottieVuePlayer);
 
@@ -16,7 +16,7 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'home',
-      component: Home      
+      component: Home
     },
     {
       path: '/load',
