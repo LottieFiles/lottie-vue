@@ -1,11 +1,11 @@
 {
   "name": "@lottiefiles/vue-lottie-player",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Lottie player wrapper for Vue.js by LottieFiles",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
-    "build:dev": "vue-cli-service build --watch --inline-vue --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
-    "build-with-coverage": "CODE_COVERAGE=true vue-cli-service build --target lib --name @lottiefiles/vue-lottie-player ./src/index.js && rm ./dist/demo.html",
+    "build": "vue-cli-service build --target lib --name vue-lottie-player ./src/index.js && rm ./dist/demo.html",
+    "build:dev": "vue-cli-service build --watch --inline-vue --target lib --name vue-lottie-player ./src/index.js && rm ./dist/demo.html",
+    "build-with-coverage": "CODE_COVERAGE=true vue-cli-service build --target lib --name vue-lottie-player ./src/index.js && rm ./dist/demo.html",
     "release": "semantic-release",
     "run-tests": "yarn run build-with-coverage && yarn run start-cypress",
     "postrun-tests": "kill $(lsof -t -i:8080)",
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/LottieFiles/lottie-vue.git"
   },
-  "main": "dist/@lottiefiles/vue-lottie-player.common.js",
+  "main": "dist/vue-lottie-player.common.js",
   "files": [
     "dist"
   ],

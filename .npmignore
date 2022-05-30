@@ -1,0 +1,22 @@
+# IDE
+.vscode
+.idea
+.history
+*.log
+
+.storybook
+stories
+
+# CI/CD
+.travis.yml
+
+# Configs
+jest.config.js
+rollup.config.js
+tsconfig.json
+
+# Docs
+docs/
+examples/
+cypress/
+cypress/react-testing-pages/src/components/lottie-react.js
