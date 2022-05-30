@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.0.8
+
+### Patch Changes
+
+- 09be46f: add build to build at root of dist folder
+
+## 1.0.8
+
+### Patch Changes
+
+- 49df023: added changesets and dual deploy
+
 ## 1.0.6
 
 ### Patch Changes
