@@ -1,6 +1,6 @@
 {
   "name": "@lottiefiles/vue-lottie-player",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Lottie player wrapper for Vue.js by LottieFiles",
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-lottie-player ./src/index.js && rm ./dist/demo.html",

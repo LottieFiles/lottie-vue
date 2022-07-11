@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.9
+
+### Patch Changes
+
+- c00ddb6: removed reset if not looping
+
 ## 1.0.8
 
 ### Patch Changes
