@@ -179,12 +179,6 @@ export default {
         this.loading = false;
       }.bind(this)
     );
-    this.player.addEventListener(
-      "complete",
-      function () {
-        this.stop();
-      }.bind(this)
-    );
     this.options.backgroundColor = this.backgroundColor;
     this.options.speed = this.speed;
     this.options.loop = this.loop;

@@ -14,7 +14,7 @@
       :player-size="options.playerSize"
       :player-controls="true"
       :showColorPicker="true"
-      :loop="true"
+      :loop="false"
       :speed="3"
       :autoplay="true"
       mode="normal"
