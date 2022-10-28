@@ -30,12 +30,12 @@
     />
     <div class="w-full lf-relative" :style="{ top: '10px' }">
       <span
-        :class="theme.active ? 'bg-white' : ''"
+        :class="theme.active ? 'lf-bg-white' : ''"
         class="lf-min-w-6 lf-absolute lf-pin-l lf-border lf-border-grey-light lf-px-1 lf-py-2px lf-rounded-md text-grey-darkest lf-text-xs lf-text-center font-lf"
         >{{ getCurrentFrame }}</span
       >
       <span
-        :class="theme.active ? 'bg-white' : ''"
+        :class="theme.active ? 'lf-bg-white' : ''"
         class="lf-min-w-6 lf-absolute lf-pin-r lf-border lf-border-grey-light lf-px-1 lf-py-2px lf-rounded-md text-grey-darkest lf-text-xs lf-text-center font-lf"
         >{{ options.animation.totalFrames }}</span
       >

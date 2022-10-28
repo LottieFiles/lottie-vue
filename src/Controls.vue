@@ -107,7 +107,7 @@
         class="lf-mx-2 lf-flex lf-items-center cursor-pointer"
       >
         <span
-          class="lf-min-w-8 bg-white lf-border lf-border-grey-light lf-px-1 lf-py-1 lf-rounded-md text-grey-darkest lf-text-xs lf-text-center font-lf"
+          class="lf-min-w-8 lf-bg-white lf-border lf-border-grey-light lf-px-1 lf-py-1 lf-rounded-md text-grey-darkest lf-text-xs lf-text-center font-lf"
           >{{ speeds[activeSpeedIndex] }}x</span
         >
       </div>
@@ -223,7 +223,7 @@
               <input
                 @keyup="updateBackgroundColor"
                 v-model="backgroundColor"
-                class="lf-w-full text-grey-dark lf-border lf-border-grey-light bg-white lf-px-3 lf-py-2 lf-rounded-md outline-none"
+                class="lf-w-full text-grey-dark lf-border lf-border-grey-light lf-bg-white lf-px-3 lf-py-2 lf-rounded-md outline-none"
                 style="font-size: 100%; box-sizing: border-box"
                 type="text"
               />
