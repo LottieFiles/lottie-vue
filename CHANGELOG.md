@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0
+
+### Minor Changes
+
+- added getVersions(), updated lottie-player
+- added getVersions(), updated player version
+
 ## 1.0.9
 
 ### Patch Changes

@@ -1,7 +1,11 @@
 <template>
   <div>
-    <div style="display: flex; justify-content: center; align-content: center"></div>
-    <div style="display: flex; justify-content: center; align-content: center"></div>
+    <div
+      style="display: flex; justify-content: center; align-content: center"
+    ></div>
+    <div
+      style="display: flex; justify-content: center; align-content: center"
+    ></div>
     <br />
     <lottie-vue-player
       ref="playerOne"
@@ -114,6 +118,8 @@ export default {
     }, 2000);
 
     this.playerFour.setBackgroundColor("#00ff6b");
+
+    console.log(this.playerOne.getVersions());
   },
 };
 </script>

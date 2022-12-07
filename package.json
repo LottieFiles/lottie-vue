@@ -1,8 +1,9 @@
 {
   "name": "@lottiefiles/vue-lottie-player",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Lottie player wrapper for Vue.js by LottieFiles",
   "scripts": {
+    "prebuild": "node -p \"'<script>export const LOTTIE_VUE_PLAYER_VERSION = ' + JSON.stringify(require('./package.json').version) + ';</script>'\" > src/versions.vue",
     "build": "vue-cli-service build --target lib --name vue-lottie-player ./src/index.js && rm ./dist/demo.html",
     "build:dev": "vue-cli-service build --watch --inline-vue --target lib --name vue-lottie-player ./src/index.js && rm ./dist/demo.html",
     "build-with-coverage": "CODE_COVERAGE=true vue-cli-service build --target lib --name vue-lottie-player ./src/index.js && rm ./dist/demo.html",
@@ -23,7 +24,7 @@
     "dist"
   ],
   "dependencies": {
-    "@lottiefiles/lottie-player": "^1.5.7",
+    "@lottiefiles/lottie-player": "^1.6.2",
     "vue": "^2.6.12"
   },
   "devDependencies": {
