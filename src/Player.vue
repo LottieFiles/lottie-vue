@@ -43,6 +43,7 @@
 <script>
 import "@lottiefiles/lottie-player";
 import Controls from "./Controls.vue";
+import { LOTTIE_VUE_PLAYER_VERSION } from "./versions";
 
 export default {
   components: {
@@ -135,6 +136,12 @@ export default {
         this.player.play();
         this.options.playing = true;
       }
+    },
+    getVersions() {
+      let obj = this.player.getVersions();
+      obj.lottieVuePlayerVersion = LOTTIE_VUE_PLAYER_VERSION;
+
+      return obj;
     },
     toggleLoop() {
       if (this.options.loop) {
