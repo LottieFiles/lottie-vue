@@ -1,4 +1,13 @@
-## LottiePlayer Vue Component
+> [!IMPORTANT]
+> **This package (`@lottiefiles/vue-lottie-player`) is deprecated and no longer maintained.**
+> Please use [`@lottiefiles/dotlottie-vue`](https://npmjs.com/package/@lottiefiles/dotlottie-vue) instead.
+>
+> - **npm**: https://npmjs.com/package/@lottiefiles/dotlottie-vue
+> - **GitHub**: https://github.com/lottiefiles/dotlottie-web
+
+---
+
+## LottiePlayer Vue Component (Deprecated)
 
 This is a Vue component for the Lottie Web Player. This library is a vue wrapper around the LottieFiles Lottie Web Player
 
